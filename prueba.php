@@ -1,6 +1,15 @@
-este es un fectch
+<?php
+$servername = "localhost"; // Dirección del servidor MySQL
+$username = "root"; // Nombre de usuario de la base de datos
+$password = "gustavo_2025"; // Contraseña de la base de datos
+$dbname = "dbprod"; // Nombre de la base de datos
 
-adadasda asasasasd a
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-
-lkasdñlaksal
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+echo "Conexión exitosa";
+?>
